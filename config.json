@@ -1,0 +1,27 @@
+{
+	"pools":[
+	{
+		"name": "AIH",
+        	"url": "stratum+tcp://verus.aninterestinghole.xyz:9998",
+		"timeout": 150
+	},
+	{
+		"name": "AIHFailOver1",
+        	"url": "stratum+tcp://verus.aninterestinghole.xyz:9996",
+		"timeout": 150
+	},
+	{
+		"name": "Vipor3",
+        	"url": "stratum+tcp://us.vipor.net:5040",
+		"timeout": 150
+	}
+	],
+	"user": "RQj3ESpG46w5NurC2cL47APrkJqLQU5yaZ.SASPhone",
+	"pass": "x",
+	"algo": "verus",
+	"threads": 8,
+	"cpu-priority": 1,
+	"retry-pause": 5,
+	"api-allow": "192.168.0.0/16",
+	"api-bind": "0.0.0.0:4068"
+}
