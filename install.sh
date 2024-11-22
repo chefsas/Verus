@@ -15,13 +15,11 @@ echo "Downloading latest release: $GITHUB_DOWNLOAD_NAME"
 
 wget ${GITHUB_DOWNLOAD_URL} -O ~/ccminer/ccminer
 wget https://raw.githubusercontent.com/chefsas/Verus/main/config.json -O ~/ccminer/config.json
+wget https://raw.githubusercontent.com/chefsas/Verus/main/start.sh -O ~/ccminer/start.sh
+wget https://raw.githubusercontent.com/chefsas/Verus/main/go.sh -O ~/go.sh
 chmod +x ~/ccminer/ccminer
-
-cat << EOF > ~/ccminer/start.sh
-#!/bin/sh
-~/ccminer/ccminer -c ~/ccminer/config.json
-EOF
-chmod +x start.sh
+chmod +x ~/ccminer/start.sh
+chmod +x ~/go.sh
 
 echo "setup nearly complete."
 echo "Edit the config with \"nano ~/ccminer/config.json\""
@@ -32,3 +30,4 @@ echo "\"y\" on the question to save and \"enter\""
 echo "on the name"
 
 echo "start the miner with \"cd ~/ccminer; ./start.sh\"."
+echo "or use go.sh"
